@@ -1,4 +1,3 @@
-# ollama.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -15,7 +14,8 @@ spec:
         app: ollama
     spec:
       containers:
-        - name: shubhbuz/ollama-tinyllama:initial
+        - name: ollama-tinyllama
+          image: shubhbuz/ollama-tinyllama:initial
           command: ["serve"]
           ports:
             - containerPort: 11434
