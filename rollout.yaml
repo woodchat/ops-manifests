@@ -20,6 +20,6 @@ spec:
     spec:
       containers:
       - name: llm-service
-        image: shubhbuz/ops-service:latest
+        image: shubhbuz/ops-service:initial
         ports:
         - containerPort: 8000
