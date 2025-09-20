@@ -24,6 +24,11 @@ spec:
           image: shubhbuz/ops-service:5f7a6bc763071467be39d4f4622b0fa984cf5f0b
           ports:
             - containerPort: 8000
+          env:
+            - name: OLLAMA_HOST
+              value: "ollama"
+            - name: OLLAMA_PORT
+              value: "11434"
           livenessProbe:
             httpGet:
               path: /health
