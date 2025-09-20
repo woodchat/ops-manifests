@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: ollama-tinyllama
-          image: shubhbuz/ollama-tinyllama:initial
+          image: shubhbuz/ollama-tinyllama:initial  # <-- image goes here
           command: ["serve"]
           ports:
             - containerPort: 11434
