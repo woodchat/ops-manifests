@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: llm-service
+  namespace: llm
+spec:
+  replicas: 2
+  strategy:
+    blueGreen:
+      activeService: llm-service
+      previewService: llm-service-preview
+      autoPromotionEnabled: false
+  selector:
+    matchLabels:
+      app: llm-service
+  template:
+    metadata:
+      labels:
+        app: llm-service
+    spec:
+      containers:
+      - name: llm-service
+        image: shubhbuz/ops-service:latest
+        ports:
+        - containerPort: 8000
