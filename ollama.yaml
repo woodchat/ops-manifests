@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: ollama-tinyllama
-          image: shubhbuz/ollama-tinyllama:v2
+          image: shubhbuz/ollama-tinyllama:v3
           ports:
             - containerPort: 11434
           volumeMounts:
