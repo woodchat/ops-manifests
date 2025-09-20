@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: llm-service
-          image: shubhbuz/ops-service:initial
+          image: shubhbuz/ops-service:5f7a6bc763071467be39d4f4622b0fa984cf5f0b
           ports:
             - containerPort: 8000
           livenessProbe:
